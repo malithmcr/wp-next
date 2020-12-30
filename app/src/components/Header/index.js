@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Logo from "../Logo/index";
-import Search from "../Search/index";
 import CTA from "../CTA/index";
 import Nav from "../Nav/index";
 import { NavMock } from "../../utils/mocks/nav";
@@ -28,10 +27,8 @@ const Header = () => {
     <HeaderWrapper id="sticky-header" className={isSticky ? "sticky" : ""}>
       <HeaderContainer>
         <Logo isSticky={isSticky} />
-        <Search isSticky={isSticky} />
         <CTA text="Register" isIcon iconName="profile" />
       </HeaderContainer>
-      <Nav isSticky={isSticky} data={NavMock} />
     </HeaderWrapper>
   );
 };

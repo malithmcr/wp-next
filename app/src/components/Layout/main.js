@@ -25,8 +25,8 @@ const MainLayout = (props) => {
     return(
     <>
         <Head>
-            <title>Forum.eu</title>
-            <meta name="keywords" content="articles, europe, forum"/>
+            <title>WP Next</title>
+            <meta name="keywords" content="nextjs, wordpress"/>
             <meta property="og:url" content={`${props.baseUrl}`}/>
             <meta property="og:type" content="website"/>
 

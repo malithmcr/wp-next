@@ -10,7 +10,7 @@ const Logo = props => {
     const {isSticky} = props;
     return(
     <LogoWrapper className={isSticky ? "sticky" : ""}>
-        <h1>Next.js</h1>
+        <h1>WP Next</h1>
     </LogoWrapper>
 );
 }

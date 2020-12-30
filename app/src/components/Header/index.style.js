@@ -10,7 +10,7 @@ export const HeaderWrapper = styled.header`
 export const HeaderContainer = styled.header`
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
     max-width: 1030px;
     height: 80px;
     margin: 0 auto;
