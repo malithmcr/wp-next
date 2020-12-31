@@ -36,7 +36,6 @@ const MainLayout = (props) => {
             <MainWrapper>
                 {props.children}
             </MainWrapper>
-            {/* You can add footer or any other global components here */}
         </div>
     </>
 )

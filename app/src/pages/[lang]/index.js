@@ -1,5 +1,5 @@
-import React, {useEffect} from "react";
-import { getArticles } from "../../services/articles";
+import React, {useState} from "react";
+import { getLogos } from "../../services/logo";
 import Card from  "../../components/Card";
 import styled from 'styled-components';
 import Editor from "../../components/Editor";
@@ -8,15 +8,15 @@ import Editor from "../../components/Editor";
  * @param {optional} props 
  */
 function HomePage(props) {
-  const { articles }  = props;
+  const { logos }  = props;
   
   return (
     <PageWrapper>
         <h1>Design Your Logo!</h1>
         <Editor />
         <div className="row">
-        {articles && articles.map((article)=>{
-            return(<Card key={article.id} img={article.thumbnailUrl} title={article.title}/>)
+        {logos && logos.map((logo)=>{
+            return(<Card key={logo?.id} img={logo?.acf?.logo_url} logoName={logo?.title?.rendered}/>)
         })}
         </div>
     </PageWrapper>
@@ -35,10 +35,10 @@ const PageWrapper = styled.div`
 
 //This gets called at build time
 export async function getServerSideProps(context) {
-  const articles = await getArticles('photos', 8);
+  const logos = await getLogos();
   return {
     props: {
-      articles: articles.data,
+      logos: logos.data,
     }, // will be passed to the page component as props
   }
 }
